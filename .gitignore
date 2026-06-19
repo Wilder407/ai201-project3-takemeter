@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# API keys — never commit these
+.env
+
+
+# macOS
+.DS_Store
