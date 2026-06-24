@@ -75,9 +75,54 @@ analysis vs hot_take boundary
 
 | Post | Label | Reasoning |
 |---|---|---|
-| "Finished my first marathon today!! 4:12, not what I wanted but I learned so much about pacing — I went out too fast and paid for it miles 18–22." | `reaction` | Pacing insight is specific but incidental to the emotional frame. |
-| "My watch says I'm overtraining but I feel fine. Garmin algorithms don't account for experienced runners." | `hot_take` | Dismissing the watch is the dominant claim; not an emotional response to an event. |
-| "I've been running for 20 years and I still think rest days are for people who don't want it enough." | `hot_take` | Experience is cited but no evidence is built around it. |
+|  The rule originally comes from famed exercise physiologist Stephen Seiler. When he studied elite athletes, he found that 80% of their sessions were done at low intensity. 20% of their sessions were high intensity. High intensity is anything above the first ventilatory threshold, or the top of Zone 1 in a 3-zone model. Note that the athletes he studied were typically doing more than 10 sessions per week, which maps out to 2-3 high-intensity sessions per week. This is consistent with what other research has found to be optimal.
+
+Many people here and elsewhere incorrectly believe that the ratio applies to either time or distance in zone. Instead, it refers to the ratio of hard sessions to easy ones. Any session that includes efforts in zones 2 or 3 (again, in a 3-zone model), is classified as a “hard” session.
+
+It is also important to note that this “rule” began as an observation. Seiler observed elite athletes behaving a certain way and wrote it down. The “rule” was not intended to be a prescription. If you run 3 days/wk including 1 hard session, you’re at 67/33. That might work for you. Many people run 5-6 days/wk with 2 hard sessions. That might be 40% hard, but it works well for many people (myself included). There are many differences between us and elite athletes. Don’t mindlessly do what they do without understanding why.
+
+So what does this mean for us? At its simplest level, it means mostly run slow, occasionally run hard. Don’t get bogged down in the exact distribution. DEFINITELY don’t spend any time (not one single second) trying to get your time-in-zone to work out to exactly 80/20. That misses the point entirely.
+
+It is entirely possible to be in a speed block (focusing on 200m and 400m repeats, for example) and only spend 5% of your time or distance above zone 1. This would be normal and productive.
+
+TLDR: The going-away most important factor in endurance training is time spent training. Want to get faster? Run more. Want to run more without getting hurt or burnt out? Run slow most of the time. That’s it; that’s the whole thing." | `analysis` | While a question is posed, there is a long conversation about the merits/demerits of the technology in question |
+| "It has been 13 years of running and six marathons; I figured it would be wrong to call myself a beginner any more. So, having just graduated from the moniker, I thought I'd write down a few notes from my personal experience, in case someone new might find it amusing or slightly useful. Here goes:
+
+You are almost certainly running too fast
+
+You get the most gains training on slow runs, especially if you are trying to build endurance. In fact, by running too fast, you are sacrificing gains. Running slower will also keeps injuries down. And "slow" is likely slower than you think. Yes, you will need speedwork and tempo runs, but you are likely overestimating their contribution to becoming fast.
+
+Your injuries are likely less serious and less permanent than you think
+
+I lived through a good number of them. What felt like a stress-fracture was just tendonitis. What I thought was hip-bursitis was just strained groin and hip muscles. In the end, it wasn’t the x-rays that solved them - it was rest and ice and Advil. Usual caveats apply.
+
+Think less shoe=better
+
+Don’t fall for that whole over-pronation nonsense. Let your feet work like they want to, and ramp up slowly. If a shoe promises to do anything more than prevent scrapes, provide just a little cushioning and maybe, look good, steer clear. Barefooting, I hear, is awesome. I have tried it but have never given it a full-fledged shot.
+
+Think 2 Years
+
+That’s how long it will take your body to get 80-90% of gains. It takes a while to build additional vasculature, metabolic capacity, aerobic capacity, muscle and tendon strength etc. Yes, it only takes a few weeks to get “5k ready”, but it takes longer to get the big gains. Lots of caveats - you have to train etc.
+
+You will run races too fast and crash
+
+There isn’t another way to learn what you are capable of and how to adjust for weather, hydration etc. So, go right ahead, crash and burn. This stuff cannot be taught.
+
+You will run too slow and fail to make up time
+
+Corrollary to previous section.
+
+If you commit to running a marathon, you will
+
+Running a marathon is more about commitment and planning than it is about innate ability, willpower, insanity or pain tolerance. You underestimate your body’s ability to adapt. It is one of the most rewarding things I have done for myself.
+
+Enjoy the running
+
+It's the single biggest factor of whether you will be a runner for life. Keep it fun.
+
+" | `reaction` | Experience is cited but it is more advice than data-driven. |
+| "I noticed that a difference between my Vivo Barefoots and Altra Escalante 2.0's. The Vivo's have a grippy insole which allows better traction between the foot and shoe, especially during turns. This feels more natural given how our feet grip the ground when barefoot. The Altra's are smooth and the foot slides within the upper a ton during runs; I wonder if a grippy insole could help this issue." | `reaction` | Wonder is present but the dominant purpose is sharing an insight. |
+
 ---
 
 ## Data Collection Plan
