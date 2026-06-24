@@ -1,0 +1,98 @@
+Text:       What did you all get out and run today? I did a 5k in my neighborhood. 
+True:      inquiry
+Predicted: analysis  (confidence: 0.34)
+
+
+# TakeMeter Demo Script
+## Target: 3–5 minutes
+
+---
+
+### INTRO [~20 seconds]
+
+"Hi, I'm Lisa and this is TakeMeter — a fine-tuned text classifier for Reddit's running community. TakeMeter classifies posts into three categories: analysis, reaction, and inquiry. I'll walk through live classifications, one correct prediction, one incorrect prediction, and a quick look at the evaluation results."
+
+---
+
+### SECTION 1: Live Classifications [~90 seconds]
+
+*Open your Colab notebook to the cell that runs inference on individual posts. Run each post and show the predicted label and confidence score on screen.*
+
+**Post 1 — analysis (correct)**
+> "I tracked my VO2 max over 12 weeks using my Garmin. Started at 48, ended at 52 after adding one tempo session per week."
+
+"The model predicts **analysis** with [X]% confidence. This is correct — the post leads with tracked data over time and builds an argument around it."
+
+---
+
+**Post 2 — reaction (correct)**
+> "Just crossed the finish line of my first marathon. I am crying. I cannot believe I did that."
+
+"The model predicts **[label]** with [X]% confidence. [Correct/incorrect] — this is a clear emotional response to a specific event."
+
+---
+
+**Post 3 — inquiry (correct)**
+> "Has anyone run Leadville before? Just signed up for my first ultra and have no idea where to start with training."
+
+"The model predicts **[label]** with [X]% confidence. The dominant purpose here is seeking guidance — a classic inquiry post."
+
+---
+
+**Post 4 — inquiry misclassified as analysis**
+> "Has anyone used Hoka Cliftons for trail running? My knees have been bothering me and I've heard the stack height helps."
+
+"Here the model predicts **analysis** with [X]% confidence — but the correct label is **inquiry**. I'll come back to this one."
+
+---
+
+**Post 5 — reaction**
+> "DNF'd at mile 18 today. My IT band completely gave out. Six months of training and it ends like this."
+
+"The model predicts **[label]** with [X]% confidence."
+
+---
+
+### SECTION 2: Correct Prediction Deep Dive [~30 seconds]
+
+*Return to Post 1.*
+
+"Let's look at why the analysis prediction is reasonable. The post leads with a specific metric — VO2 max — tracked over a defined time period — 12 weeks — with numerical start and end values. That structure maps directly to the analysis definition: a claim built around evidence. The model correctly identified the evidence-building pattern here."
+
+---
+
+### SECTION 3: Incorrect Prediction Deep Dive [~40 seconds]
+
+*Return to Post 4.*
+
+"Now the failure case. The model predicted analysis for this inquiry post about a question about running in a neighborhood. This is the most common error pattern in TakeMeter — technical running vocabulary like 5K. The model learned to associate that vocabulary with analysis regardless of whether the post is making an argument or asking a question. This is a vocabulary proxy problem, not a label boundary problem — and it's directly tied to having only 200 training examples, not enough to separate similar-sounding posts by communicative purpose."
+
+---
+
+### SECTION 4: Evaluation Report Walkthrough [~60 seconds]
+
+*Switch to your README or evaluation_report.md.*
+
+"Here's a summary of the results. The baseline — Claude Haiku with zero-shot prompting — achieved 0.633 accuracy and 0.61 macro F1. The fine-tuned DistilBERT model achieved 0.333 accuracy. The baseline outperformed fine-tuning in this case.
+
+*Show the confusion matrix.*
+
+The confusion matrix tells the story clearly — the fine-tuned model predicted analysis for 29 of 30 test examples. This is class collapse. Across three training runs with different class distributions, the model collapsed to whichever label held the plurality each time. That pattern strongly suggests 200 examples is insufficient for DistilBERT to learn the semantic boundaries between these labels.
+
+The baseline succeeded where fine-tuning failed because zero-shot prompting gave the model direct access to the decision logic through the system prompt. Fine-tuning on a small imbalanced dataset couldn't replicate that.
+
+The path forward is clear: expand to at least 150 examples per label and revisit the analysis-inquiry boundary with more targeted examples before retraining."
+
+---
+
+### OUTRO [~15 seconds]
+
+"That's TakeMeter — a fine-tuned running discourse classifier with an honest evaluation of where it works, where it fails, and why. Thanks for watching."
+
+---
+
+## Recording Tips
+- Run inference cells live rather than showing screenshots — it reads more authentically
+- Have your posts ready in a list cell so you can run them quickly without typing
+- Keep the confidence score visible — if your notebook doesn't show it, add `print(f"Label: {label}, Confidence: {score:.2f}")` to your inference cell
+- Aim for ~4 minutes — leaving room for pauses and natural pacing
