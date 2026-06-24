@@ -218,3 +218,10 @@ Claude (`claude-sonnet-4-6`) was used at multiple stages of this project. The fo
 ## Disclosure Note
 
 Label stress-testing with AI-generated boundary posts was planned in the original spec but not executed. All post labels reflect direct human judgment applied against the label definitions and tiebreaker rules. No AI pre-labeling was used for the annotated dataset.
+
+---
+
+## Link to Demo Video
+
+https://cuboulder.zoom.us/rec/share/Bjd5dDLA5UfgRICscfiBhHHTyEG1CupgNYZgGNKP_6Zsr8UCAL8fsbAzIaPsXVeP.TXBQxurjolIwB1D4?startTime=1782268171000
+Passcode: 8=8!0s*Q
