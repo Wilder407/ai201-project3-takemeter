@@ -1,0 +1,58 @@
+### Examples:
+**`analysis`**
+- "I tracked my cadence over 6 months and increased it from 165 to 180 spm. My injury rate dropped to zero — higher cadence reduces injury risk."
+- "Comparing Pfitzinger vs. Hansons over two training cycles: my long run pace dropped 18 sec/mile on Pfitzinger but my fatigue index was significantly higher in weeks 14–16."
+
+**`hot_take`**
+- "Zone 2 training is completely overhyped. Most recreational runners would be better off just running more."
+- "Carbon plates are ruining the sport — everyone is chasing times that don't reflect real fitness."
+
+**`reaction`**
+- "Just crossed the finish line of my first marathon. I am crying. I cannot believe I did that."
+- "DNF'd today at mile 23. I trained for six months and my knee just gave out. Completely devastated."
+
+**`inquiry`**
+- "Just signed up for my first ultra — has anyone run Leadville before? No idea where to start with training."
+- "IT band completely gave out at mile 18. Has anyone dealt with this? How long did recovery take?"
+
+**`other`**
+- Spam posts, promotional links, or posts with no coherent content.
+
+### Anticipated Hard Edge-cases
+<!-- What type of post will be genuinely ambiguous between two labels? How will you handle it when you encounter it during annotation? -->
+
+### `analysis` vs. `reaction`
+
+| Post | Label | Reasoning |
+|---|---|---|
+|  The rule originally comes from famed exercise physiologist Stephen Seiler. When he studied elite athletes, he found that 80% of their sessions were done at low intensity. 20% of their sessions were high intensity. High intensity is anything above the first ventilatory threshold, or the top of Zone 1 in a 3-zone model. Note that the athletes he studied were typically doing more than 10 sessions per week, which maps out to 2-3 high-intensity sessions per week. This is consistent with what other research has found to be optimal.
+
+Many people here and elsewhere incorrectly believe that the ratio applies to either time or distance in zone. Instead, it refers to the ratio of hard sessions to easy ones. Any session that includes efforts in zones 2 or 3 (again, in a 3-zone model), is classified as a “hard” session.
+
+It is also important to note that this “rule” began as an observation. Seiler observed elite athletes behaving a certain way and wrote it down. The “rule” was not intended to be a prescription. If you run 3 days/wk including 1 hard session, you’re at 67/33. That might work for you. Many people run 5-6 days/wk with 2 hard sessions. That might be 40% hard, but it works well for many people (myself included). There are many differences between us and elite athletes. Don’t mindlessly do what they do without understanding why.
+
+So what does this mean for us? At its simplest level, it means mostly run slow, occasionally run hard. Don’t get bogged down in the exact distribution. DEFINITELY don’t spend any time (not one single second) trying to get your time-in-zone to work out to exactly 80/20. That misses the point entirely.
+
+It is entirely possible to be in a speed block (focusing on 200m and 400m repeats, for example) and only spend 5% of your time or distance above zone 1. This would be normal and productive.
+
+TLDR: The going-away most important factor in endurance training is time spent training. Want to get faster? Run more. Want to run more without getting hurt or burnt out? Run slow most of the time. That’s it; that’s the whole thing. | `analysis` | While a question is posed, there is a long conversation about the merits/demerits of the technology in question |
+| " Dear Forerunner 245 Music,
+
+When you tell me my runs are ‘unproductive’ that hurts my feelings. And I’m not even going to discuss your VO2 measurements.
+
+And another thing: This afternoon I ran 10 miles. That’s the farthest I’ve ever run.
+
+So when I was lying on the couch just now recovering and feeling exhausted but good about myself. And you started buzzing telling me to ‘Move!’? How insensitive.
+
+Also, when we first got together you used to buzz and display messages from my iPhone. Then one day you just stopped doing that. I’ve tried every ‘solution’ on the first two pages of google to fix it but nothing works. I loved that feature but you took it away from me.
+
+I want to be honest with you 245. I noticed the 935 is on sale for half price at the moment, and I’m a little tempted. "" | `reaction` | This post is written to the gear that provides data for individual runs and over time and reactions to the technology suggestions. There is a tone of sarcasm and a question mark that could likely confuse the model |
+| "Zone 2 is overhyped. I ran my PR on mostly tempo work and I have the Strava data to prove it." | `hot_take` | One PR mentioned in passing. Data is a footnote to an assertion, not the structure of the argument. |
+
+
+### `reaction` vs. `inquiry`
+
+| Post | Label | Reasoning |
+|---|---|---|
+| "I noticed that a difference between my Vivo Barefoots and Altra Escalante 2.0's. The Vivo's have a grippy insole which allows better traction between the foot and shoe, especially during turns. This feels more natural given how our feet grip the ground when barefoot. The Altra's are smooth and the foot slides within the upper a ton during runs; I wonder if a grippy insole could help this issue." | `reaction` | Wonder is present but the dominant purpose is sharing an insight. |
+| "IT band completely gave out at mile 18. Has anyone dealt with this? How long did recovery take?" | `inquiry` | Emotion present but clearly seeking input. |
